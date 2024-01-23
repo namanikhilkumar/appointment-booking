@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Booking Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="register-form">
+      <h2>Create an Account</h2>
+      <label for="signupName">Name:</label>
+      <input type="text" id="signupName" required>
+      <label for="signupUsername">Username:</label>
+      <input type="text" id="signupUsername" required>
+      <label for="signupPassword">Password:</label>
+      <input type="password" id="signupPassword" required>
+      <button onclick="register()">Create Account</button>
+    </div>
+    <div id="login-form">
+      <h2>Login</h2>
+      <label for="loginUsername">Username:</label>
+      <input type="text" id="loginUsername" required>
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required>
+      <button onclick="login()">Login</button>
+    </div>
+    <div id="booking-form" style="display:none;">
+      <h2>Available Slots:</h2>
+      <ul id="slots-list"></ul>
+      <button onclick="bookSlot()">Book Slot</button>
+    </div>
+    <div id="confirmation" style="display:none;">
+      <h2>Appointment Confirmation</h2>
+      <p>Name: <span id="confirmationName"></span></p>
+      <p>Time Slot: <span id="confirmationSlot"></span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
